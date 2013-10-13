@@ -79,10 +79,12 @@ void travel(int v)
             if (1 == map[v][0]) {
                 del_edge(v, i);
                 travel(i);
+                break;
             } else {
                 if (!is_bridge(v, i)) {
                     del_edge(v, i);
                     travel(i);
+                    break;
                 }
             }
         }
